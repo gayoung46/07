@@ -1,19 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void f(void);
+
+int i;
 int main(void)
 {
-  int i=10;
-  printf("함수 호출전i=%d\n", i);
-  inc(i);
-  printf("함수 호출후i=%d\n", i);
-  
-  system("PAUSE");	
-  return 0;
+    for(i=0;i<5;i++)
+    {
+                    f();
+    }
+    system("PAUSE");
+    return 0;
 }
 
-int inc(int counter)
+void f(void)
 {
-    counter++;
-    return counter;
+     for(i=0;i<10;i++)
+     printf("#");
 }
+
